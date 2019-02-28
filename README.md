@@ -32,7 +32,7 @@ npm start
 ```
 
 ## Notes
-**Zero downtime deploy**: If you are using a nais image to run your front-end application. You must ensure that the file names are the same between each deploy. By default CRA always names the js file `[name].[file-hash].js` and the css file `[name]-[file-hash].css`. This is usually good, but we need the names to always stay the same when serving static files from a nais application. If not, a user can end up getting a new index.html from a new running instance, but asking the old instance for the `js` and `css` files. If the filenames are different, the user will get a 404.
+**Zero downtime deploy**: If you are using a nais image to run your front-end application. You must ensure that the file names are the same between each deploy. By default CRA always names the js file `[name].[file-hash].js` and the css file `[name]-[file-hash].css`. This is usually good, but we need the names to stay the same when serving static files from a nais application. If not, a user can end up getting a new index.html from a new running instance, but asking the old instance for the `js` and `css` files. If the filenames are different, the user will get a 404.
 
 **Generated files**: When building typescript for the first time, CRA will create a `tsconfig.json` file and a `react-app-env.d.ts` file. `react-app-env.d.ts` will have the following content:
 ```
